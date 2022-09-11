@@ -1,17 +1,17 @@
-# Run Selenium Tests With Behat On LambdaTest
+# Run Appium Tests With Behat On LambdaTest
 
 ![image](https://user-images.githubusercontent.com/70570645/171988795-ed884ca8-f431-48b3-afcc-91a014fd5059.png)
 
 <p align="center">
-  <a href="https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample" target="_bank">Blog</a>
+  <a href="https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample" target="_bank">Blog</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample" target="_bank">Docs</a>
+  <a href="https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample" target="_bank">Docs</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample" target="_bank">Learning Hub</a>
+  <a href="https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample" target="_bank">Learning Hub</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/newsletter/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample" target="_bank">Newsletter</a>
+  <a href="https://www.lambdatest.com/newsletter/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample" target="_bank">Newsletter</a>
   &nbsp; &#8901; &nbsp;
-  <a href="https://www.lambdatest.com/certifications/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample" target="_bank">Certifications</a>
+  <a href="https://www.lambdatest.com/certifications/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample" target="_bank">Certifications</a>
   &nbsp; &#8901; &nbsp;
   <a href="https://www.youtube.com/c/LambdaTest" target="_bank">YouTube</a>
 </p>
@@ -21,7 +21,7 @@
 
 *Learn how to use Behat framework to configure and run your PHP automation scripts on the LambdaTest platform*
 
-[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample)
+[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample)
 
 ## Table Of Contents
 
@@ -30,9 +30,9 @@
 * [Parallel Testing With Behat](#running-parallel-tests-using-behat)
 * [Local Testing With Behat](#testing-locally-hosted-or-privately-hosted-projects)
 
-## Prerequisites For Running Behat Selenium Scripts
+## Prerequisites For Running Behat appium Scripts
 
-Before you begin automation testing with Selenium and Behat, you would need to:
+Before you begin automation testing with appium and Behat, you would need to:
 
 * Make sure that you have the latest **PHP** installed on your system. You can download and install **PHP** using following commands in the terminal:
 
@@ -54,12 +54,12 @@ Before you begin automation testing with Selenium and Behat, you would need to:
   ```bash
   mv composer.phar /usr/local/bin/composer
   ```
-### Installing Selenium Dependencies And Tutorial Repo
+### Installing appium Dependencies And Tutorial Repo
 
-**Step 1:** Clone the LambdaTest’s Behat-Selenium-sample repository and navigate to the code directory as shown below:
+**Step 1:** Clone the LambdaTest’s Behat-appium-sample repository and navigate to the code directory as shown below:
 ```bash
-git clone https://github.com/LambdaTest/behat-selenium-sample
-cd behat-selenium-sample
+git clone https://github.com/LambdaTest/behat-appium-sample
+cd behat-appium-sample
 ```
 **Step 2:** Install the composer dependencies in the current project directory using the command below:
 ```bash
@@ -72,7 +72,7 @@ php composer.phar require behat/behat
 
 ### Setting Up Your Authentication
 
-Make sure you have your LambdaTest credentials with you to run test automation scripts. You can get these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample) or by your [LambdaTest Profile](https://accounts.lambdatest.com/login?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample).
+Make sure you have your LambdaTest credentials with you to run test automation scripts. You can get these credentials from the [LambdaTest Automation Dashboard](https://automation.lambdatest.com/build?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample) or by your [LambdaTest Profile](https://accounts.lambdatest.com/login?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample).
 
 **Step 2:** Set LambdaTest **Username** and **Access Key** in environment variables.
 
@@ -90,7 +90,7 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 
 ## Run Your First Test
 
->**Test Scenario**: Checkout sample [FeatureContext.php](https://github.com/LambdaTest/behat-selenium-sample/blob/master/features/bootstrap/FeatureContext.php) file. This Behat script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
+>**Test Scenario**: Checkout sample [FeatureContext.php](https://github.com/LambdaTest/behat-appium-sample/blob/master/features/bootstrap/FeatureContext.php) file. This Behat script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
 
 ```bash
 Feature: LambdaTest TodoApp Functionality
@@ -104,9 +104,9 @@ Scenario: Check and Verify
 
 ### Configuration of Your Test Capabilities
 
-**Step 5:** In [single.conf.yml](https://github.com/LambdaTest/behat-selenium-sample/blob/master/config/single.conf.yml), you need to update your test capabilities like  OS, browser, browser version and so on.
+**Step 5:** In [single.conf.yml](https://github.com/LambdaTest/behat-appium-sample/blob/master/config/single.conf.yml), you need to update your test capabilities like  OS, browser, browser version and so on.
 
-You can generate capabilities for your test requirements with the help of our inbuilt [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample).
+You can generate capabilities for your test requirements with the help of our inbuilt [Desired Capability Generator](https://www.lambdatest.com/capabilities-generator/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample).
 
 
 ### Executing The Test
@@ -128,9 +128,9 @@ composer parallel
 
 ## Testing Locally Hosted Or Privately Hosted Projects
 
-You can test your locally hosted or privately hosted projects with LambdaTest Selenium grid using LambdaTest Tunnel. All you would have to do is set up an SSH tunnel using tunnel and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are live.
+You can test your locally hosted or privately hosted projects with LambdaTest appium grid using LambdaTest Tunnel. All you would have to do is set up an SSH tunnel using tunnel and pass toggle `tunnel = True` via desired capabilities. LambdaTest Tunnel establishes a secure SSH protocol based tunnel that allows you in testing your locally hosted or privately hosted pages, even before they are live.
 
-Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample) for more information.
+Refer our [LambdaTest Tunnel documentation](https://www.lambdatest.com/support/docs/testing-locally-hosted-pages/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample) for more information.
 
 Here’s how you can establish LambdaTest Tunnel.
 
@@ -163,13 +163,13 @@ Once you are able to connect **LambdaTest Tunnel** successfully, you would just 
       
 Visit the following links to learn more about LambdaTest's features, setup and tutorials around test automation, mobile app testing, responsive testing, and manual testing.
 
-* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample)
-* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample)
-* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample)    
+* [LambdaTest Documentation](https://www.lambdatest.com/support/docs/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample)
+* [LambdaTest Blog](https://www.lambdatest.com/blog/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample)
+* [LambdaTest Learning Hub](https://www.lambdatest.com/learning-hub/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample)    
 
 ## LambdaTest Community :busts_in_silhouette:
 
-The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
+The [LambdaTest Community](https://community.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample) allows people to interact with tech enthusiasts. Connect, ask questions, and learn from tech-savvy people. Discuss best practises in web development, testing, and DevOps with professionals from across the globe 🌎
 
 ## What's New At LambdaTest ❓
 
@@ -177,11 +177,11 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
       
 ## About LambdaTest
 
-[LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
+[LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample) is a leading test execution and orchestration platform that is fast, reliable, scalable, and secure. It allows users to run both manual and automated testing of web and mobile apps across 3000+ different browsers, operating systems, and real device combinations. Using LambdaTest, businesses can ensure quicker developer feedback and hence achieve faster go to market. Over 500 enterprises and 1 Million + users across 130+ countries rely on LambdaTest for their testing needs.    
 
 ### Features
 
-* Run Selenium, Cypress, Puppeteer, Playwright, and Appium automation tests across 3000+ real desktop and mobile environments.
+* Run appium, Cypress, Puppeteer, Playwright, and Appium automation tests across 3000+ real desktop and mobile environments.
 * Real-time cross browser testing on 3000+ environments.
 * Test on Real device cloud
 * Blazing fast test automation with HyperExecute
@@ -195,11 +195,11 @@ To stay updated with the latest features and product add-ons, visit [Changelog](
 * LT Browser - for responsive testing across 50+ pre-installed mobile, tablets, desktop, and laptop viewports
 
     
-[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample)
+[<img height="58" width="200" src="https://user-images.githubusercontent.com/70570645/171866795-52c11b49-0728-4229-b073-4b704209ddde.png">](https://accounts.lambdatest.com/register?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample)
 
 
       
 ## We are here to help you :headphones:
 
 * Got a query? we are available 24x7 to help. [Contact Us](mailto:support@lambdatest.com)
-* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=behat-selenium-sample)
+* For more info, visit - [LambdaTest](https://www.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=behat-appium-sample)

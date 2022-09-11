@@ -1,7 +1,8 @@
-Feature: LambdaTest TodoApp Functionality
+Feature: LambdaTest Proverbial App testing 
 
-Scenario: Check and Verify
-    Given I am on "https://lambdatest.github.io/sample-todo-app/"
-    When I click on checkboxes
-    And I add checkbox with text "New check box"
-    Then I get checkbox text as "New check box"
+Scenario: Check all buttons
+    Given I am on the proverbial home page
+    When I click on color
+    And I click on text element
+    And I click on notification element
+    Then I click on toast element

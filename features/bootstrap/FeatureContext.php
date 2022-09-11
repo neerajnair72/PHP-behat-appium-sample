@@ -3,39 +3,48 @@
 require "vendor/autoload.php";
 
 class FeatureContext extends LambdaContext {
-  /** @Given /^I am on "([^"]*)"$/ */
-  public function iAmOnSite($url) {
-    self::$driver->get($url);
-  }
-
-   /**
-     * @When I click on checkboxes
+    /**
+     * @Given I am on the proverbial home page
      */
-  public function iClickOnCheckboxes() {
-    $element = self::$driver->findElement(WebDriverBy::name("li1"));
-    $element->click();
-    $element2 = self::$driver->findElement(WebDriverBy::name("li2"));
-    $element2->click();
-    sleep(5);
-  }
-
-  /**
-     * @When I add checkbox with text :arg1
-     */
-    public function iAddCheckboxWithText($arg1)
+    public function iAmOnTheProverbialHomePage()
     {
-      $inputBox = self::$driver->findElement(WebDriverBy::id("sampletodotext"));
-      $inputBox->sendKeys($arg1);
-      $addbox = self::$driver->findElement(WebDriverBy::id("addbutton"));
-      $addbox->click();
+      echo "I am on the proverbial home page";
+
     }
 
-
-  /** @Then /^I get checkbox text as "([^"]*)"$/ */
-  public function iShouldGet($string) {
-    $title = self::$driver->findElement(WebDriverBy::xpath("/html/body/div/div/div/ul/li[6]/span"))->getText();
-    if ((string)  $string !== $title) {
-      throw new Exception("Expected title: '". $string. "'' Actual is: '". $title. "'");
+    /**
+     * @When I click on color
+     */
+    public function iClickOnColor()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("color"));
+      $element->click();
     }
-  }
+
+    /**
+     * @When I click on text element
+     */
+    public function iClickOnTextElement()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("Text"));
+      $element->click();
+    }
+
+    /**
+     * @When I click on notification element
+     */
+    public function iClickOnNotificationElement()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("notification"));
+      $element->click();
+    }
+
+    /**
+     * @Then I click on toast element
+     */
+    public function iClickOnToastElement()
+    {
+      $element = self::$driver->findElement(WebDriverBy::id("toast"));
+      $element->click();
+    }
 }

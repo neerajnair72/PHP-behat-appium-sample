@@ -2,6 +2,7 @@
   "require": {
     "behat/behat": "^3.10.0",
     "facebook/webdriver": "dev-master",
+    "appium/php-client": "dev-master",
     "symfony/yaml": "*"
   },
   "config": {

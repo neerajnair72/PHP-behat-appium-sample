@@ -7,40 +7,31 @@ default:
             contexts:
                 - FeatureContext:
                     parameters:
-                        server: "hub.lambdatest.com"
+                        server: "mobile-hub.lambdatest.com"
                         user: "YOUR LT_USERNAME"
                         key: "YOUR LT_ACCESS_KEY"
                         capabilities:
                             # common capabilities added for every test
-                            build: "behat-selenium-sample"
+                            build: "behat-appium-sample"
+                            name: "parallel-behat-test"
+                            isRealMobile: true
+                            app: "lt://APP10160601531662470732060830"
                         environments:
                             # each capability in this list is execute as single test
                             # so to run multiple tests in parallel,
                             # simply define multiple capabilities below and execute the test with
                             # $ php run-parallel.php -c config/<filename>.yml
                         -
-                            browserName: chrome
-                            browserVersion: latest
-                            platformName: Windows 10
-                            name: "parallel behat test latest"
+                            deviceName: Galaxy S21 Ultra 5G
+                            platform: Android
+                            platformVersion: 11
                         -
-                            browserName: chrome
-                            browserVersion: latest-1
-                            platformName: Windows 10
-                            name: "parallel behat test latest-1"
+                            deviceName: OnePlus 9 Pro
+                            platform: Android
+                            platformVersion: 11
                         -
-                            browserName: chrome
-                            browserVersion: latest-2
-                            platformName: Windows 10
-                            name: "parallel behat test latest-2"
-                        -
-                            browserName: chrome
-                            browserVersion: latest-3
-                            platformName: Windows 10
-                            name: "parallel behat test latest-3"
-                        -
-                            browserName: chrome
-                            browserVersion: latest-4
-                            platformName: Windows 10
-                            name: "parallel behat test latest-4"
+                            deviceName: Redmi 9
+                            platform: Android
+                            platformVersion: 10
+
                     

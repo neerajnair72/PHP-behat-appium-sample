@@ -7,16 +7,18 @@ default:
             contexts:
              - FeatureContext:
                     parameters:
-                        server: "hub.lambdatest.com"
-                        user: "YOUR LT_USERNAME"
-                        key: "YOUR LT_ACCESS_KEY"
+                        server: "mobile-hub.lambdatest.com"
+                        user: "YOUR USERNAME HERE"
+                        key: "YOUR ACCESS KEY HERE"
                         capabilities:
-                            build: "behat-selenium-sample"
+                            build: "behat-appium-sample"
                             name: "single-behat-test"
+                            isRealMobile: true
+                            app: "lt://APP10160601531662470732060830"
                         environments:
                             -
-                                browserName: chrome
-                                browserVersion: latest
-                                platformName: Windows10
+                                deviceName: Galaxy S21 Ultra 5G
+                                platform: Android
+                                platformVersion: 11
 
 
