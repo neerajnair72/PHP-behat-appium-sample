@@ -93,13 +93,14 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 >**Test Scenario**: Checkout sample [FeatureContext.php](https://github.com/LambdaTest/behat-appium-sample/blob/master/features/bootstrap/FeatureContext.php) file. This Behat script tests a sample to-do list app by marking couple items as done, adding a new item to the list and finally displaying the count of pending items as output.
 
 ```bash
-Feature: LambdaTest TodoApp Functionality
+Feature: LambdaTest Proverbial App testing 
 
-Scenario: Check and Verify
-    Given I am on "https://lambdatest.github.io/sample-todo-app/"
-    When I click on checkboxes
-    And I add checkbox with text "New check box"
-    Then I get checkbox text as "New check box"
+Scenario: Check all buttons
+    Given I am on the proverbial home page
+    When I click on color
+    And I click on text element
+    And I click on notification element
+    Then I click on toast element
 ```
 
 ### Configuration of Your Test Capabilities
