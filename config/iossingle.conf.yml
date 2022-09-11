@@ -14,11 +14,11 @@ default:
                             build: "behat-appium-sample"
                             name: "single-behat-test"
                             isRealMobile: true
-                            app: "YOUR APP URL HERE"
+                            app: "YOUR APP URL"
                         environments:
                             -
-                                deviceName: Galaxy S21 Ultra 5G
-                                platform: Android
-                                platformVersion: 11
+                                deviceName: iPhone 11
+                                platform: ios
+                                platformVersion: 14
 
 

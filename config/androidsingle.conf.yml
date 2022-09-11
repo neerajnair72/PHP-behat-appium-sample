@@ -1,0 +1,24 @@
+default:
+    autoload:
+        '': '%paths.base%/../features/bootstrap'
+    suites:
+        default:
+            paths: [ '%paths.base%/../features' ]
+            contexts:
+             - FeatureContext:
+                    parameters:
+                        server: "mobile-hub.lambdatest.com"
+                        user: "YOUR USERNAME HERE"
+                        key: "YOUR ACCESS KEY HERE"
+                        capabilities:
+                            build: "behat-appium-sample"
+                            name: "single-behat-test"
+                            isRealMobile: true
+                            app: "YOUR APP URL"
+                        environments:
+                            -
+                                deviceName: Galaxy S21 Ultra 5G
+                                platform: Android
+                                platformVersion: 11
+
+
