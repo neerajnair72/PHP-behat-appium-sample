@@ -14,7 +14,7 @@ default:
                             build: "behat-appium-sample"
                             name: "single-behat-test"
                             isRealMobile: true
-                            app: "lt://APP10160601531662470732060830"
+                            app: "YOUR APP URL HERE"
                         environments:
                             -
                                 deviceName: Galaxy S21 Ultra 5G

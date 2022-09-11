@@ -15,7 +15,7 @@ default:
                             build: "behat-appium-sample"
                             name: "parallel-behat-test"
                             isRealMobile: true
-                            app: "lt://APP10160601531662470732060830"
+                            app: "YOUR APP URL HERE"
                         environments:
                             # each capability in this list is execute as single test
                             # so to run multiple tests in parallel,
